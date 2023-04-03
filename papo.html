@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Salas papo</title>
+	<title>Sala do papo</title>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
@@ -29,23 +29,19 @@
 				<img src="manda o papo.jpeg" id="img">
 			</sup>
 		</h1>
-		<h3 id="userName" class="color_white"></h3>
+        <div id="output"></div>
 
 		<div class="form-group input_div_room_page">
-			<label>#Adicionar Sala:</label>
-			<input type="text" id="roomName" class="form-control" placeholder="#Nome da Sala">
+			<label>#Enviar mensagem:</label>
+			<input type="text" id="mensagem" class="form-control" placeholder="#Escreva uma mensagem">
 		</div>
 		
-		<button onclick="addRoom();" class="btn btn-success">#Adicionar Sala</button>
-
-		<h3 class="color_white">#SALASTRENDING</h3>
-
-		<div id="output"></div>
+		<button onclick="enviar();" class="btn btn-success">#Enviar mensagem</button>
 		
 	</center>
 </div>
 
 
-<script src="manda.js"></script>
+<script src="papo.js"></script>
 </body>
 </html>
