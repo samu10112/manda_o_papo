@@ -30,7 +30,7 @@ function getData(){
       var childdata=childSnapshot.val;
       if(childkey!="purpose"){
         var fire_id=childkey;
-        var message_data=child;
+        var message_data=childdata;
         var name_base=message_data["name"];
         var message_base=message_data["message"];
         var like_base=message_data["like"];
@@ -52,7 +52,7 @@ function atualizalike(id_da_mensagem){
   var id_do_botao=id_da_mensagem;
   var likes=document.getElementById(id_do_botao).value;
   var atualiza_like=Number(likes)+1;
-  firebase.database().ref(nome_da_sala).child(id_da_mensagem).update({
+  firebase.database().ref(nome_da_sala).childdata(id_da_mensagem).update({
     like:atualiza_like
   });
 }
